@@ -27,10 +27,12 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
+        "image": "shopify:\/\/shop_images\/smiling-woman-poses.jpg",
+        "image_2": "shopify:\/\/shop_images\/single-breasted-mens-suit-on-model.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",

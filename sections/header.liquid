@@ -1,26 +1,143 @@
-<header class="header header2">
-  <div class="header2__logo"><a href="/link">Brand</a></div>
-  <ul class="header2__collections-nav">
-    <li class="header2__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
+{% case section.settings.header_type %}
+{% when 'header1' %}
+<header class="header header1">
+  <ul class="header1__collections-nav">
+    <li class="header1__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
       <ul class="collection-link__sub-links">
         <li><a href="#" class="collection-link__sub-link">Link</a></li>
         <li><a href="#" class="collection-link__sub-link">Link</a></li>
         <li><a href="#" class="collection-link__sub-link">Link</a></li>
       </ul>
     </li>
-    <li class="header2__collection-link"><a href="/link">Link</a></li>
-    <li class="header2__collection-link"><a href="/link">Link</a></li>
+    <li class="header1__collection-link"><a href="/link">Link</a></li>
+    <li class="header1__collection-link"><a href="/link">Link</a></li>
   </ul>
-  <div class="header2__collections-nav2"><a href="/cart"><i class="fas fa-shopping-cart"></i></a><a href="/cart"><i
-        class="fas fa-user"></i></a></div>
+  <div class="header1__logo">
+    <a href="{{ routes.root_url }}">
+      {%- if section.settings.logo != blank -%}
+            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+              src="{{ section.settings.logo | img_url: image_size }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            {{ shop.name }}
+      {%- endif -%}
+    </a>
+  </div>
+  <ul class="header1__collections-nav">
+    <li class="header1__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
+      <ul class="collection-link__sub-links">
+        <li><a href="#" class="collection-link__sub-link">Link</a></li>
+        <li><a href="#" class="collection-link__sub-link">Link</a></li>
+        <li><a href="#" class="collection-link__sub-link">Link</a></li>
+      </ul>
+    </li>
+    <li class="header1__collection-link"><a href="/link">Link</a></li>
+    <li class="header1__collection-link"><a href="/link">Link</a></li><a href="/cart"><i
+        class="fas fa-shopping-cart"></i></a><a href="/cart"><i class="fas fa-user"></i></a>
+  </ul>
   <div class="header2__hamburger"><i class="fas fa-bars"></i></div>
 </header>
+{% when 'header2' %}
+  <header class="header header2">
+    <div class="header2__logo"><a href="{{ routes.root_url }}">
+        {%- if section.settings.logo != blank -%}
+            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+              src="{{ section.settings.logo | img_url: image_size }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            {{ shop.name }}
+      {%- endif -%}
+    </a>
+    </div>
+    <ul class="header2__collections-nav">
+      <li class="header2__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
+        <ul class="collection-link__sub-links">
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+        </ul>
+      </li>
+      <li class="header2__collection-link"><a href="/link">Link</a></li>
+      <li class="header2__collection-link"><a href="/link">Link</a></li>
+    </ul>
+    <div class="header2__collections-nav2"><a href="/cart"><i class="fas fa-shopping-cart"></i></a><a href="/cart"><i
+          class="fas fa-user"></i></a></div>
+    <div class="header2__hamburger"><i class="fas fa-bars"></i></div>
+  </header>
+{% when 'header3' %}
+  <header class="header header3">
+    <div class="header3__logo"><a href="{{ routes.root_url }}">
+        {%- if section.settings.logo != blank -%}
+            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+              src="{{ section.settings.logo | img_url: image_size }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            {{ shop.name }}
+      {%- endif -%}
+    </a>
+    </div>
+    <ul class="header3__collections-nav">
+      <li class="header3__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
+        <ul class="collection-link__sub-links">
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+          <li><a href="#" class="collection-link__sub-link">Link</a></li>
+        </ul>
+      </li>
+      <li class="header3__collection-link"><a href="/link">Link</a></li>
+      <li class="header3__collection-link"><a href="/link">Link</a></li><a href="/cart"><i
+          class="fas fa-shopping-cart"></i></a><a href="/cart"><i class="fas fa-user"></i></a>
+    </ul>
+    <div class="header3__hamburger"><i class="fas fa-bars"></i></div>
+  </header>
+{% endcase %}
+
+
+
 
 
 {% schema %}
 {
 "name": "t:sections.header.name",
 "settings": [
+{
+"type": "select",
+"id": "header_type",
+"label": "Type Of Header",
+"options": [
+{
+"value": "header1",
+"label": "Header 1"
+},
+{
+"value": "header2",
+"label": "Header 2"
+},
+{
+"value": "header3",
+"label": "Header 3"
+}
+],
+"default": "header1"
+},
 {
 "type": "select",
 "id": "color_scheme",

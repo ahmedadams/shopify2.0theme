@@ -2,16 +2,25 @@
 {% when 'header1' %}
 <header class="header header1">
   <ul class="header1__collections-nav">
-    <li class="header1__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
-      <ul class="collection-link__sub-links">
-        <li><a href="#" class="collection-link__sub-link">Link</a></li>
-        <li><a href="#" class="collection-link__sub-link">Link</a></li>
-        <li><a href="#" class="collection-link__sub-link">Link</a></li>
-      </ul>
-    </li>
-    <li class="header1__collection-link"><a href="/link">Link</a></li>
-    <li class="header1__collection-link"><a href="/link">Link</a></li>
+  {%- if section.settings.menu != blank -%}
+  {%- for link in section.settings.menu.links -%}
+    {%- if link.links == blank -%}
+        <li class="header1__collection-link">
+        <a href="/link">Link</a>
+        </li>
+      {%- else -%}  
+        <li class="header1__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
+          <ul class="collection-link__sub-links">
+            <li><a href="#" class="collection-link__sub-link">Link</a></li>
+            <li><a href="#" class="collection-link__sub-link">Link</a></li>
+            <li><a href="#" class="collection-link__sub-link">Link</a></li>
+          </ul>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
   </ul>
+
   <div class="header1__logo">
     <a href="{{ routes.root_url }}">
       {%- if section.settings.logo != blank -%}
@@ -30,6 +39,7 @@
     </a>
   </div>
   <ul class="header1__collections-nav">
+   {%- if section.settings.menu != blank -%}
     <li class="header1__collection-link"><a href="/link">Collections<i class="fas fa-chevron-down"></i></a>
       <ul class="collection-link__sub-links">
         <li><a href="#" class="collection-link__sub-link">Link</a></li>
@@ -38,8 +48,14 @@
       </ul>
     </li>
     <li class="header1__collection-link"><a href="/link">Link</a></li>
-    <li class="header1__collection-link"><a href="/link">Link</a></li><a href="/cart"><i
-        class="fas fa-shopping-cart"></i></a><a href="/cart"><i class="fas fa-user"></i></a>
+    <li class="header1__collection-link"><a href="/link">Link</a></li>
+    {%- endif -%}
+    <a href="/cart">
+    <i class="fas fa-shopping-cart"></i>
+    </a>
+    <a href="/cart">
+    <i class="fas fa-user"></i>
+    </a>
   </ul>
   <div class="header2__hamburger"><i class="fas fa-bars"></i></div>
 </header>

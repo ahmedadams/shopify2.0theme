@@ -35,9 +35,43 @@
         "opacity": 50,
         "info_alignment": "center"
       }
+    },
+    "1640963085ed4e2363": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "100vh",
+        "background1": "#000000",
+        "opacity1": 50,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 50,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
+    },
+    "1640963088ff4600ef": {
+      "type": "collection-of-products",
+      "settings": {
+        "collection": "men",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#EDEFF5",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
     }
   },
   "order": [
-    "164096302502c721e6"
+    "164096302502c721e6",
+    "1640963085ed4e2363",
+    "1640963088ff4600ef"
   ]
 }

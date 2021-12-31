@@ -31,8 +31,9 @@
       ],
       "settings": {
         "hero_height": "100vh",
-        "background": "#000000",
-        "opacity": 50,
+        "image": "shopify:\/\/shop_images\/woman-in-orange-zip-up-jacket.jpeg",
+        "background": "#41337a",
+        "opacity": 19,
         "info_alignment": "center"
       }
     },

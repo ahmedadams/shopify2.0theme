@@ -58,7 +58,7 @@
       "settings": {
         "collection": "adidas",
         "total_products": 3,
-        "container_shape": "rectangle",
+        "container_shape": "circle",
         "image_fit": "contain",
         "background": "#ffffff",
         "opacity": 100,

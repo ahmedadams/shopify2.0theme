@@ -17,9 +17,9 @@
             "type": "announcement",
             "settings": {
               "text": "Welcome to our store",
-              "background_color": "#ff4500",
-              "announcement_text_color": "#fffafa",
-              "link": "shopify:\/\/collections\/adidas"
+              "background_color": "#41337a",
+              "announcement_text_color": "#b4f1c1",
+              "link": "shopify:\/\/collections"
             }
           }
         },

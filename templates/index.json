@@ -102,8 +102,8 @@
         "16409634759fd0417c-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "VIEW MORE",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },

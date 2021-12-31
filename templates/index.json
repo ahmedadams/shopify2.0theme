@@ -114,7 +114,7 @@
       "settings": {
         "hero_height": "50vh",
         "image": "shopify:\/\/shop_images\/young-man-watches-sunset.jpg",
-        "background": "#000000",
+        "background": "#331e36",
         "opacity": 50,
         "info_alignment": "center"
       }

@@ -53,6 +53,24 @@
         "button_link2": "shopify:\/\/collections\/women"
       }
     },
+    "16409630966b7bcc9a": {
+      "type": "collection-of-products",
+      "settings": {
+        "collection": "adidas",
+        "total_products": 3,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-6"
+      }
+    },
     "1640963088ff4600ef": {
       "type": "collection-of-products",
       "settings": {
@@ -75,6 +93,7 @@
   "order": [
     "164096302502c721e6",
     "1640963085ed4e2363",
+    "16409630966b7bcc9a",
     "1640963088ff4600ef"
   ]
 }

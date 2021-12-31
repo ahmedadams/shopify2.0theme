@@ -37,36 +37,6 @@
         "info_alignment": "center"
       }
     },
-    "16409634756d3336d7": {
-      "type": "hero-one",
-      "blocks": {
-        "16409634759fd0417c-0": {
-          "type": "heading",
-          "settings": {
-            "title": "50% OFF ALL COLLECTIONS",
-            "title_size": "lg"
-          }
-        },
-        "16409634759fd0417c-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "VIEW MORE",
-            "button_link": "shopify:\/\/collections"
-          }
-        }
-      },
-      "block_order": [
-        "16409634759fd0417c-0",
-        "16409634759fd0417c-2"
-      ],
-      "settings": {
-        "hero_height": "50vh",
-        "image": "shopify:\/\/shop_images\/young-man-watches-sunset.jpg",
-        "background": "#331e36",
-        "opacity": 50,
-        "info_alignment": "center"
-      }
-    },
     "1640963085ed4e2363": {
       "type": "hero-two",
       "settings": {
@@ -101,6 +71,36 @@
         "sm_col": "col-sm-6"
       }
     },
+    "16409634756d3336d7": {
+      "type": "hero-one",
+      "blocks": {
+        "16409634759fd0417c-0": {
+          "type": "heading",
+          "settings": {
+            "title": "50% OFF ALL COLLECTIONS",
+            "title_size": "lg"
+          }
+        },
+        "16409634759fd0417c-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "VIEW MORE",
+            "button_link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "16409634759fd0417c-0",
+        "16409634759fd0417c-2"
+      ],
+      "settings": {
+        "hero_height": "50vh",
+        "image": "shopify:\/\/shop_images\/young-man-watches-sunset.jpg",
+        "background": "#331e36",
+        "opacity": 50,
+        "info_alignment": "center"
+      }
+    },
     "1640963088ff4600ef": {
       "type": "collection-of-products",
       "settings": {
@@ -122,9 +122,9 @@
   },
   "order": [
     "164096302502c721e6",
-    "16409634756d3336d7",
     "1640963085ed4e2363",
     "16409630966b7bcc9a",
+    "16409634756d3336d7",
     "1640963088ff4600ef"
   ]
 }

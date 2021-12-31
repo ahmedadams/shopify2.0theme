@@ -16,7 +16,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "50% OFF ALL COLLECTIONS",
               "background_color": "#41337a",
               "announcement_text_color": "#b4f1c1",
               "link": "shopify:\/\/collections"

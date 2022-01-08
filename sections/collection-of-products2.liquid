@@ -1,60 +1,89 @@
-<div class="collection collection1">
+<!-- Collection 3 -->
+<div class="collection collection3">
 	<div class="container">
 		<div class="row">
 			{%- for product in section.settings.collection.products limit: section.settings.total_products   -%}
+			<!-- product colors loop -->
+			{% assign colors = '' %}
+			{%- for variant in block.settings.featured_product.variants -%}
+			{% assign variantColor = variant.option2 %}
+			{% assign colors = colors | append: variantColor %}
+			<!-- product colors loop -->
 			<div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{- section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
-				<div class="collection1__collection-item">
-				{% assign opacity = section.settings.opacity | divided_by: 100.00 %}
-					<div class="collection1__product-img collection1__product-img--{{ section.settings.container_shape }} collection1__product-img--{{ section.settings.image_fit }}" style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity }}">
-						<div class="collection1__heart">
-							<i class="far fa-heart"></i>
-						</div>
-							{%- if product.images[0] != blank -%}
-							<a class="img-link" href="{{ product.url }}">
+				<div class="collection3__collection-item">
+					{% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+					<div class="collection3__product-img collection3__product-img--{{ section.settings.container_shape }} collection3__product-img--{{ section.settings.image_fit }}" style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity }}">
+						<div class="collection3__heart"><i class="far fa-heart"></i></div>
+						{%- if product.images[0] != blank -%}
+						<a class="img-link" href="{{ product.url }}">
+							<img
+								srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
+								{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+								{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+								{%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
+								{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
+								{%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}
+								{{ product.images[0] | img_url: 'master' }} {{ product.images[0].width }}w"
+								src="{{ product.images[0] | img_url: '2000x' }}"
+								sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+								alt="{{ product.images[0].alt | escape }}"
+								loading="lazy"
+								width="{{ product.images[0].width }}"
+								height="{{ product.images[0].height }}"
+								class="collection3__img-front">
+
 								<img
-									srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
-									{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
-									{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
-									{%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
-									{%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
-									{%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}
-									{{ product.images[0] | img_url: 'master' }} {{ product.images[0].width }}w"
-									src="{{ product.images[0] | img_url: '2000x' }}"
-									sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-									alt="{{ product.images[0].alt | escape }}"
-									loading="lazy"
-									width="{{ product.images[0].width }}"
-									height="{{ product.images[0].height }}"
-									class="hero1__bg">
-							</a>	
-							{%- else -%}
-							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-							{%- endif -%}
+								srcset="{%- if product.images[1].width >= 165 -%}{{ product.images[1] | img_url: '165x' }} 165w,{%- endif -%}
+								{%- if product.images[1].width >= 360 -%}{{ product.images[1] | img_url: '360x' }} 360w,{%- endif -%}
+								{%- if product.images[1].width >= 535 -%}{{ product.images[1] | img_url: '535x' }} 535w,{%- endif -%}
+								{%- if product.images[1].width >= 750 -%}{{ product.images[1] | img_url: '750x' }} 750w,{%- endif -%}
+								{%- if product.images[1].width >= 1070 -%}{{ product.images[1] | img_url: '1070x' }} 1070w,{%- endif -%}
+								{%- if product.images[1].width >= 1500 -%}{{ product.images[1] | img_url: '2000x' }} 2000w,{%- endif -%}
+								{{ product.images[1] | img_url: 'master' }} {{ product.images[1].width }}w"
+								src="{{ product.images[1] | img_url: '2000x' }}"
+								sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+								alt="{{ product.images[1].alt | escape }}"
+								loading="lazy"
+								width="{{ product.images[1].width }}"
+								height="{{ product.images[1].height }}"
+								class="collection3__img-back">
+					
+						</a>	
+						{%- else -%}
+						{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{%- endif -%}
 					</div>
-					<div class="collection1__product-info">
-						<div class="collection1__product-details">
+					<div class="collection3__product-info">
+						<div class="collection3__product-details">
 							{%- if section.settings.show_title == true -%}
-							<span class="collection1__product-title">
+							<span class="collection3__product-title">
 								{{ product.title }}
 							</span>
 							{%- endif -%}
 							{%- if section.settings.show_price == true -%}
-							<span class="collection1__product-price">
+							<span class="collection3__product-price">
 								${{ product.price }}
 							</span>
-							{%- endif -%}
+							{%- endif -%}	
 						</div>
-						<div class="collection1__colors">
-							<div class="collection1__color collection1__color--blue"></div>
-							<div class="collection1__color collection1__color--grey"></div>
+						<div class="collection3__colors">
+							<div class="collection3__color collection3__color--blue"></div>
+							<div class="collection3__color collection3__color--grey"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			{%- endfor -%}
+			{%- endfor -%}
 		</div>
 	</div>
 </div>
+<!-- / Collection 3 -->
+
+
+
+
+
 
 
 
@@ -64,7 +93,7 @@
 
 {% schema %}
 {
-	"name": "Collection of Products",
+	"name": "Collection of Products2",
 	"class": "spaced-section spaced-section--full-width",
 	"settings": [
 		{
@@ -264,7 +293,7 @@
 		}
 	],
 	"presets": [{
-		"name": "Collection of Products"
+		"name": "Collection of Products2"
 	}]
 }
 {% endschema %}

@@ -6,9 +6,12 @@
 			<!-- product colors loop -->
 			{% assign colors = '' %}
 			{%- for variant in product.variants -%}
-			{% assign colors = colors | append: ',' | append: variant.option2 %}
-			{% assign colors = colors | remove_first: ',' | split: ',' | uniq %}
-			{% for color in colors %}
+			{% assign variantColor = variant.option2 %}
+			{% assign colors = colors | append: variantColor %}
+			{% assign colors = colors | append: ", " %}
+			{% assign arrayColors = colors | split: "," %}
+			{% assign uniqueColors = arrayColors | uniq %}
+			{% for uniqueColor in uniqueColors %}
 			<!-- product colors loop -->
 			<div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
 				<div class="collection3__collection-item">
@@ -75,7 +78,7 @@
 					</div>
 				</div>
 			</div>
-				{% endfor %}
+				{% endfor%}
 				{%- endfor -%}
 			{%- endfor -%}
 		</div>

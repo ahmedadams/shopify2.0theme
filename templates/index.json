@@ -54,7 +54,7 @@
       }
     },
     "16409630966b7bcc9a": {
-      "type": "collection-of-products",
+      "type": "collection-of-products1",
       "settings": {
         "collection": "adidas",
         "total_products": 3,
@@ -102,7 +102,7 @@
       }
     },
     "1640963088ff4600ef": {
-      "type": "collection-of-products",
+      "type": "collection-of-products2",
       "settings": {
         "collection": "men",
         "total_products": 8,

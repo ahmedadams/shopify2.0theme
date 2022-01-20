@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product-alternate",
       "blocks": {
         "vendor": {
           "type": "text",
@@ -51,9 +51,13 @@
     },
     "product-recommendations": {
       "type": "product-recommendations"
+    },
+    "hero-two": {
+      "type": "hero-two"
     }
   },
   "order": [
+    "hero-two",
     "main",
     "product-recommendations"
   ]

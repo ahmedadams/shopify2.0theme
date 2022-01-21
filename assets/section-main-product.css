@@ -281,6 +281,7 @@ a.product__text {
 }
 
 .product__title {
+  text-align: left;
   word-break: break-word;
   margin-bottom: 1.5rem;
 }

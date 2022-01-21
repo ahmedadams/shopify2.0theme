@@ -79,7 +79,7 @@
     "164279023554614475": {
       "type": "hero-two",
       "settings": {
-        "hero_height": "100vh",
+        "hero_height": "50vh",
         "background1": "#000000",
         "opacity1": 50,
         "button_label1": "Button label",
@@ -88,6 +88,24 @@
         "opacity2": 50,
         "button_label2": "Button label",
         "button_link2": ""
+      }
+    },
+    "164279035510f9a7c6": {
+      "type": "collection-of-products1",
+      "settings": {
+        "collection": "",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#FFFFFF",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
       }
     },
     "164279024638d32c0d": {
@@ -163,6 +181,7 @@
     "164278994300c62b88",
     "1642789947c3a9721a",
     "164279023554614475",
+    "164279035510f9a7c6",
     "164279024638d32c0d",
     "16427902825bebeea3",
     "1642790268c1e0614d"

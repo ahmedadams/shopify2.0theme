@@ -12,20 +12,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "50% OFF ALL COLLECTIONS",
-              "background_color": "#41337a",
-              "announcement_text_color": "#b4f1c1",
-              "link": "shopify:\/\/collections"
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
         "settings": {
         }
       },
@@ -54,9 +40,11 @@
           "footer-0"
         ],
         "settings": {
+          "footer_p": "",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": false
+          "show_social": false,
+          "footer_bottom_menu": ""
         }
       }
     },

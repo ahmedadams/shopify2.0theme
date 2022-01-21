@@ -97,7 +97,7 @@
         "total_products": 8,
         "container_shape": "rectangle",
         "image_fit": "contain",
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
         "show_price": true,
@@ -129,7 +129,7 @@
         "total_products": 8,
         "container_shape": "rectangle",
         "image_fit": "contain",
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
         "show_price": true,
@@ -175,6 +175,22 @@
         "opacity": 50,
         "info_alignment": "center"
       }
+    },
+    "1642790548c729ef21": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
@@ -184,6 +200,7 @@
     "164279035510f9a7c6",
     "164279024638d32c0d",
     "16427902825bebeea3",
-    "1642790268c1e0614d"
+    "1642790268c1e0614d",
+    "1642790548c729ef21"
   ]
 }
